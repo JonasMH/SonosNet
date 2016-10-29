@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UPnPNet;
 
 namespace SonosNet
@@ -9,30 +10,51 @@ namespace SonosNet
 		private const int InstanceId = 0;
 
 		public string Name { get; set; }
+		public string Uuid { get; set; }
 
 		internal SonosSpeaker(UPnPServiceControl control)
 		{
 			_serviceControl = control;
 		}
 
-		public async void Play()
+		public async Task Play()
 		{
-			await _serviceControl.SendAction("Play", new Dictionary<string, string>() { { "InstanceID", InstanceId.ToString() }, { "Speed", "1" } });
+			await SendAction("Play", new Dictionary<string, string>() { { "Speed", "1" } });
 		}
 
-		public async void Pause()
+		public async Task Pause()
 		{
-			await _serviceControl.SendAction("Pause", new Dictionary<string, string>() { { "InstanceID", InstanceId.ToString() } });
+			await SendAction("Pause");
 		}
 
-		public async void Stop()
+		public async Task Stop()
 		{
-			await _serviceControl.SendAction("Stop", new Dictionary<string, string>() { { "InstanceID", InstanceId.ToString() } });
+			await SendAction("Stop");
 		}
 
-		public async void Next()
+		public async Task Next()
 		{
-			await _serviceControl.SendAction("Next", new Dictionary<string, string>() { { "InstanceID", InstanceId.ToString() } });
+			await SendAction("Next");
+		}
+
+		public async Task Previous()
+		{
+			await SendAction("Previous");
+		}
+
+		private async Task SendAction(string command, IDictionary<string, string> additionalArguments = null)
+		{
+			IDictionary<string, string> arguments = new Dictionary<string, string>() {{"InstanceID", InstanceId.ToString()}};
+
+			if (additionalArguments != null)
+			{
+				foreach (KeyValuePair<string, string> keyValuePair in additionalArguments)
+				{
+					arguments.Add(keyValuePair);
+				}
+			}
+
+			await _serviceControl.SendAction(command, arguments);
 		}
 	}
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SonosNet.Cli
 {
@@ -10,20 +9,31 @@ namespace SonosNet.Cli
 		public static void Main(string[] args)
 		{
 			IList<SonosSpeaker> speakers = new SonosDiscovery().FindSpeakers().Result;
-			SonosSpeaker jonasSonosSpeaker = speakers.FirstOrDefault(x => x.Name.Contains("Jonas"));
 
-			if (jonasSonosSpeaker != null)
+			foreach (SonosSpeaker sonosSpeaker in speakers)
 			{
-				Console.WriteLine("Playing");
-				jonasSonosSpeaker.Play();
-
-				Task.Delay(5000).Wait();
-
-				Console.WriteLine("Pausing");
-				jonasSonosSpeaker.Pause();
+				Console.WriteLine(sonosSpeaker.Name + " (" + sonosSpeaker.Uuid + ")");
 			}
 
-			Console.ReadKey();
+			Console.WriteLine("Controlling jonas's");
+
+			SonosSpeaker jonasSonosSpeaker = speakers.FirstOrDefault(x => x.Name.Contains("Jonas"));
+
+			while (true)
+			{
+				ConsoleKeyInfo key = Console.ReadKey();
+
+				switch (key.Key)
+				{
+					case ConsoleKey.A:
+						jonasSonosSpeaker.Play();
+						break;
+					case ConsoleKey.S:
+
+						jonasSonosSpeaker.Pause();
+						break;
+				}
+			}
 		}
 	}
 }

@@ -1,11 +1,11 @@
 {
 	"version": "0.0.1-*",
 
-  "dependencies": {
-    "NETStandard.Library": "1.6.1-preview1-24530-04",
-    "System.Net.Requests": "4.3.0-preview1-24530-04",
-    "UPnPNet": "0.0.1-build5"
-  },
+	"dependencies": {
+		"NETStandard.Library": "1.6.1-preview1-24530-04",
+		"System.Net.Requests": "4.3.0-preview1-24530-04",
+		"UPnPNet": "0.0.1-build5"
+	},
 
 	"frameworks": {
 		"netcoreapp1.0": {

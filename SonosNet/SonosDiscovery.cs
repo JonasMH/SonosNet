@@ -33,9 +33,12 @@ namespace SonosNet
 						x => x.Services.Any(y => y.Type == serviceType));
 				
 				UPnPService avService = sonosDevice.SubDevices.SelectMany(x => x.Services).FirstOrDefault(x => x.Type == serviceType);
-				SonosSpeaker speaker = new SonosSpeaker(new UPnPServiceControl(avService)) {Name = GetName(subDevice.Properties["friendlyName"]) };
-
-
+				SonosSpeaker speaker = new SonosSpeaker(new UPnPServiceControl(avService))
+				{
+					Name = GetName(subDevice.Properties["friendlyName"]),
+					Uuid = subDevice.Properties["UDN"].Replace("uuid:", "")
+				};
+				
 				speakers.Add(speaker);
 			}
 
