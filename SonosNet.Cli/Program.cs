@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SonosNet.Models;
+using SonosNet.Services;
 
 namespace SonosNet.Cli
 {
@@ -8,30 +10,36 @@ namespace SonosNet.Cli
 	{
 		public static void Main(string[] args)
 		{
-			IList<SonosSpeaker> speakers = new SonosDiscovery().FindSpeakers().Result;
+			IList<SonosSpeaker> speakers = new SonosDiscoveryService().FindSpeakers().Result;
 
 			foreach (SonosSpeaker sonosSpeaker in speakers)
 			{
 				Console.WriteLine(sonosSpeaker.Name + " (" + sonosSpeaker.Uuid + ")");
 			}
 
-			Console.WriteLine("Controlling jonas's");
 
-			SonosSpeaker jonasSonosSpeaker = speakers.FirstOrDefault(x => x.Name.Contains("Jonas"));
+			SonosSpeaker speaker = speakers.FirstOrDefault();
+			Console.WriteLine("Controlling " + speaker.Name);
 
 			while (true)
 			{
-				ConsoleKeyInfo key = Console.ReadKey();
+				string line = Console.ReadLine();
 
-				switch (key.Key)
+				if (line.StartsWith("a"))
 				{
-					case ConsoleKey.A:
-						jonasSonosSpeaker.Play();
-						break;
-					case ConsoleKey.S:
-
-						jonasSonosSpeaker.Pause();
-						break;
+					speaker.Control.Play();
+				}
+				else if (line.StartsWith("s"))
+				{
+					speaker.Control.Pause();
+				}
+				else if (line.StartsWith("v"))
+				{
+					speaker.Control.SetVolume(int.Parse(line.Remove(0, 1).Trim()));
+				}
+				else if (line.StartsWith("b"))
+				{
+					Console.WriteLine(speaker.Control.GetVolume().Result);
 				}
 			}
 		}

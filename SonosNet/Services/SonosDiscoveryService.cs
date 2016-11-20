@@ -2,44 +2,38 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using SonosNet.Contants;
+using SonosNet.Models;
 using UPnPNet;
 using UPnPNet.Discovery;
 using UPnPNet.Discovery.SearchTargets;
 
-namespace SonosNet
+namespace SonosNet.Services
 {
-	public class SonosDiscovery
+	public class SonosDiscoveryService
 	{
-		private readonly Regex _nameRegex;
-
-		public SonosDiscovery()
-		{
-			_nameRegex = new Regex("(.*) -.*");
-		}
-
+		private readonly Regex _nameRegex = new Regex("(.*) -.*");
+		
 		public async Task<IList<SonosSpeaker>> FindSpeakers()
 		{
-			UPnPDiscovery discovery = new UPnPDiscovery { SearchTarget = DiscoverySearchTargets.ServiceTypeSearch("AVTransport", "1") };
+			UPnPDiscovery discovery = new UPnPDiscovery { SearchTarget = DiscoverySearchTargetFactory.ServiceTypeSearch("AVTransport", "1") };
 			IList<UPnPDevice> devices = await discovery.Search();
 
 			IEnumerable<UPnPDevice> sonosDevices = devices.Where(x => x.Properties["friendlyName"].ToLower().Contains("sonos"));
 			IList<SonosSpeaker> speakers = new List<SonosSpeaker>();
-			const string serviceType = "urn:schemas-upnp-org:service:AVTransport:1";
 
 			foreach (UPnPDevice sonosDevice in sonosDevices)
 			{
 				UPnPDevice subDevice =
 					sonosDevice.SubDevices.FirstOrDefault(
-						x => x.Services.Any(y => y.Type == serviceType));
-				
-				UPnPService avService = sonosDevice.SubDevices.SelectMany(x => x.Services).FirstOrDefault(x => x.Type == serviceType);
-				SonosSpeaker speaker = new SonosSpeaker(new UPnPServiceControl(avService))
+						x => x.Services.Any(y => y.Type == UPnPSonosServiceType.AvService));
+
+				speakers.Add(new SonosSpeaker()
 				{
 					Name = GetName(subDevice.Properties["friendlyName"]),
-					Uuid = subDevice.Properties["UDN"].Replace("uuid:", "")
-				};
-				
-				speakers.Add(speaker);
+					Uuid = subDevice.Properties["UDN"].Replace("uuid:", ""),
+					Control = new SonosSpeakerControlService(subDevice)
+				});
 			}
 
 			return speakers;

@@ -4,10 +4,10 @@
 		"emitEntryPoint": true
 	},
 
-	"dependencies": {
-		"Microsoft.NETCore.App": "1.1.0-preview1-001100-00",
-		"SonosNet": "0.0.1-*"
-	},
+    "dependencies": {
+        "Microsoft.NETCore.App": "1.1.0",
+        "SonosNet": "0.0.1-*"
+    },
 
 	"frameworks": {
 		"netcoreapp1.0": {
