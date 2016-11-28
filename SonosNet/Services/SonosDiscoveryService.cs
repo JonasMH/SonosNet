@@ -4,9 +4,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using SonosNet.Contants;
 using SonosNet.Models;
-using UPnPNet;
 using UPnPNet.Discovery;
 using UPnPNet.Discovery.SearchTargets;
+using UPnPNet.Models;
 
 namespace SonosNet.Services
 {
@@ -25,10 +25,10 @@ namespace SonosNet.Services
 			foreach (UPnPDevice sonosDevice in sonosDevices)
 			{
 				UPnPDevice subDevice =
-					sonosDevice.SubDevices.FirstOrDefault(
-						x => x.Services.Any(y => y.Type == UPnPSonosServiceType.AvService));
+					sonosDevice.SubDevices
+					.FirstOrDefault(x => x.Services.Any(y => y.Type == UPnPSonosServiceType.AvService));
 
-				speakers.Add(new SonosSpeaker()
+				speakers.Add(new SonosSpeaker
 				{
 					Name = GetName(subDevice.Properties["friendlyName"]),
 					Uuid = subDevice.Properties["UDN"].Replace("uuid:", ""),

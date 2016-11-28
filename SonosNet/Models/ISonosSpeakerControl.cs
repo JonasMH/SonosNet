@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
+using UPnPNet.Gena;
 
 namespace SonosNet.Models
 {
@@ -11,5 +13,8 @@ namespace SonosNet.Models
 		Task Stop();
 		Task SetVolume(int value);
 		Task<int> GetVolume();
+
+		void SubscribeToEvents(string notifyUrl, GenaSubscriptionHandler handler, int timeout = 3600);
+		event EventHandler<int> OnVolumeUpdate;
 	}
 }

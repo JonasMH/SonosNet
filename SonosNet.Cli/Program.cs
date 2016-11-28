@@ -17,7 +17,6 @@ namespace SonosNet.Cli
 				Console.WriteLine(sonosSpeaker.Name + " (" + sonosSpeaker.Uuid + ")");
 			}
 
-
 			SonosSpeaker speaker = speakers.FirstOrDefault();
 			Console.WriteLine("Controlling " + speaker.Name);
 
@@ -40,6 +39,10 @@ namespace SonosNet.Cli
 				else if (line.StartsWith("b"))
 				{
 					Console.WriteLine(speaker.Control.GetVolume().Result);
+				}
+				else if (line.StartsWith("q"))
+				{
+					break;
 				}
 			}
 		}

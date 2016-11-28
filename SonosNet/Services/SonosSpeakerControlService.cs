@@ -1,50 +1,72 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Threading.Tasks;
 using SonosNet.Models;
-using UPnPNet;
 using System.Linq;
 using SonosNet.Contants;
+using UPnPNet.Gena;
+using UPnPNet.Models;
+using UPnPNet.Services.AvTransport;
+using UPnPNet.Services.RenderingControl;
 
 namespace SonosNet.Services
 {
 	public class SonosSpeakerControlService : ISonosSpeakerControl
 	{
 		private const int InstanceId = 0;
-		private readonly UPnPServiceControl _avService;
-		private readonly UPnPServiceControl _renderControlService;
+		private readonly AvTransportServiceControl _avService;
+		private readonly RenderingControlServiceControl _renderingControlService;
 
 		public SonosSpeakerControlService(UPnPDevice speakerDevice)
 		{
 			UPnPService avService = speakerDevice.Services.FirstOrDefault(x => x.Type == UPnPSonosServiceType.AvService);
 			UPnPService renderingControl = speakerDevice.Services.FirstOrDefault(x => x.Type == UPnPSonosServiceType.RenderingControlService);
 
-			_avService = new UPnPServiceControl(avService);
-			_renderControlService = new UPnPServiceControl(renderingControl);
+			_avService = new AvTransportServiceControl(avService);
+			_renderingControlService = new RenderingControlServiceControl(renderingControl);
+		}
+
+		public void SubscribeToEvents(string notifyUrl, GenaSubscriptionHandler handler, int timeout = 3600)
+		{
+			_avService.OnLastChangeEvent += AvServiceOnLastChangeEvent;
+			_renderingControlService.OnLastChangeEvent += RenderingControlOnLastChangeEvent;
+
+			_avService.SubscribeToEvents(handler, notifyUrl, timeout).Wait();
+			_renderingControlService.SubscribeToEvents(handler, notifyUrl, timeout).Wait();
+		}
+
+		private void RenderingControlOnLastChangeEvent(object sender, RenderingControlEvent e)
+		{
+			OnVolumeUpdate?.Invoke(this, e.Volumes[RenderingControlChannel.Master]);
+		}
+
+		private void AvServiceOnLastChangeEvent(object sender, AvTransportEvent e)
+		{
+			
 		}
 
 		public async Task Play()
 		{
-			await SendAction(_avService, "Play", new KeyValuePair<string, string>("Speed", "1"));
+			await _avService.Play(InstanceId, 1);
 		}
 
 		public async Task Pause()
 		{
-			await SendAction(_avService, "Pause");
+			await _avService.Pause(InstanceId);
 		}
 
 		public async Task Stop()
 		{
-			await SendAction(_avService, "Stop");
+			await _avService.Stop(InstanceId);
 		}
 
 		public async Task Next()
 		{
-			await SendAction(_avService, "Next");
+			await _avService.Next(InstanceId);
 		}
 
 		public async Task Previous()
 		{
-			await SendAction(_avService, "Previous");
+			await _avService.Previous(InstanceId);
 		}
 
 		public async Task SetVolume(int value)
@@ -54,29 +76,14 @@ namespace SonosNet.Services
 				return;
 			}
 
-			await SendAction(_renderControlService, "SetVolume", new KeyValuePair<string, string>("Channel", "Master"), new KeyValuePair<string, string>("DesiredVolume", value.ToString()));
+			await _renderingControlService.SetVolume(InstanceId, RenderingControlChannel.Master, value);
 		}
 
 		public async Task<int> GetVolume()
 		{
-			IDictionary<string, string> response = await SendAction(_renderControlService, "GetVolume", new KeyValuePair<string, string>("Channel", "Master"));
-
-			return int.Parse(response.FirstOrDefault(x => x.Key == "CurrentVolume").Value);
+			return await _renderingControlService.GetVolume(InstanceId, RenderingControlChannel.Master);
 		}
 
-		private async Task<IDictionary<string, string>> SendAction(UPnPServiceControl service, string command, params KeyValuePair<string, string>[] additionalArguments)
-		{
-			IDictionary<string, string> arguments = new Dictionary<string, string>() { { "InstanceID", InstanceId.ToString() } };
-
-			if (additionalArguments != null)
-			{
-				foreach (KeyValuePair<string, string> keyValuePair in additionalArguments)
-				{
-					arguments.Add(keyValuePair);
-				}
-			}
-
-			return await service.SendAction(command, arguments);
-		}
+		public event EventHandler<int> OnVolumeUpdate;
 	}
 }
