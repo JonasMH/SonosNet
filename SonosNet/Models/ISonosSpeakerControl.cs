@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using UPnPNet.Gena;
 
@@ -15,6 +16,6 @@ namespace SonosNet.Models
 		Task<int> GetVolume();
 
 		void SubscribeToEvents(string notifyUrl, GenaSubscriptionHandler handler, int timeout = 3600);
-		event EventHandler<int> OnVolumeUpdate;
+		event EventHandler<KeyValuePair<string, string>> OnUpdate;
 	}
 }

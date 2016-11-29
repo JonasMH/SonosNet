@@ -4,7 +4,7 @@
 	"dependencies": {
 		"NETStandard.Library": "1.6.1",
 		"System.Net.Requests": "4.3.0",
-        "UPnPNet": "0.0.1-build16"
+        "UPnPNet": "0.0.1-build18"
 	},
 
 	"frameworks": {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using SonosNet.Models;
 using System.Linq;
@@ -36,12 +37,12 @@ namespace SonosNet.Services
 
 		private void RenderingControlOnLastChangeEvent(object sender, RenderingControlEvent e)
 		{
-			OnVolumeUpdate?.Invoke(this, e.Volumes[RenderingControlChannel.Master]);
+			OnUpdate?.Invoke(this, new KeyValuePair<string, string>("volume", e.Volumes[RenderingControlChannel.Master].ToString()));
 		}
 
 		private void AvServiceOnLastChangeEvent(object sender, AvTransportEvent e)
 		{
-			
+			OnUpdate?.Invoke(this, new KeyValuePair<string, string>("play-state", e.TransportState.Value));
 		}
 
 		public async Task Play()
@@ -84,6 +85,6 @@ namespace SonosNet.Services
 			return await _renderingControlService.GetVolume(InstanceId, RenderingControlChannel.Master);
 		}
 
-		public event EventHandler<int> OnVolumeUpdate;
+		public event EventHandler<KeyValuePair<string, string>> OnUpdate;
 	}
 }
