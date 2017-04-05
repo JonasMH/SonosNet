@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netcoreapp1.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Net.Requests" Version="4.3.0" />
+		<PackageReference Include="UPnPNet" Version="1.0.0-build10105" />
+	</ItemGroup>
+</Project>

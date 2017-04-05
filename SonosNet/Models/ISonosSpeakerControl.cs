@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using UPnPNet.Gena;
+using UPnPNet.Server;
 
 namespace SonosNet.Models
 {
@@ -15,7 +15,8 @@ namespace SonosNet.Models
 		Task SetVolume(int value);
 		Task<int> GetVolume();
 
-		void SubscribeToEvents(string notifyUrl, GenaSubscriptionHandler handler, int timeout = 3600);
+		void SubscribeToEvents(UPnPServer server);
 		event EventHandler<KeyValuePair<string, string>> OnUpdate;
+		Task AddURITOQueue();
 	}
 }

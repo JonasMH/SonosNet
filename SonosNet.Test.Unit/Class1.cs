@@ -1,14 +1,14 @@
-﻿using NUnit.Framework;
+﻿
+using Xunit;
 
 namespace SonosNet.Test.Unit
 {
-	[TestFixture]
 	public class Class1
 	{
-		[Test]
+		[Fact]
 		public void Always_Green()
 		{
-			Assert.That(true, Is.EqualTo(true));
+			Assert.Equal(true, true);
 		}
 	}
 }

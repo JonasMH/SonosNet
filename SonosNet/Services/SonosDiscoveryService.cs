@@ -26,7 +26,7 @@ namespace SonosNet.Services
 			{
 				UPnPDevice subDevice =
 					sonosDevice.SubDevices
-					.FirstOrDefault(x => x.Services.Any(y => y.Type == UPnPSonosServiceType.AvService));
+					.FirstOrDefault(x => x.Services.Any(y => y.Type == UPnPSonosServiceTypes.AvService));
 
 				speakers.Add(new SonosSpeaker
 				{
