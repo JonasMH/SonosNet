@@ -5,6 +5,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="System.Net.Requests" Version="4.3.0" />
-		<PackageReference Include="UPnPNet" Version="1.0.0-build10105" />
+		<PackageReference Include="UPnPNet" Version="1.0.0-build10109" />
 	</ItemGroup>
 </Project>

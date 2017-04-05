@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using SonosNet.Models;
 using SonosNet.Services;
-using SonosNet.SMAPI;
-using UPnPNet.Server;
+using UPnPNet;
 
 namespace SonosNet.Cli
 {
@@ -14,16 +12,11 @@ namespace SonosNet.Cli
 	{
 		public static void Main(string[] args)
 		{
-			Run().Wait();
+			Run();
 		}
 
-		private static async Task Run()
+		private static void Run()
 		{
-			var service = new SMAPIService();
-			var result1 = await service.Search("https://spotify-v4.ws.sonos.com/smapi", "artist", "Foo Figters");
-
-
-			return;
 			IList<SonosSpeaker> speakers = new SonosDiscoveryService().FindSpeakers().Result;
 
 			foreach (SonosSpeaker sonosSpeaker in speakers)
@@ -41,6 +34,7 @@ namespace SonosNet.Cli
 			server.Start(new IPEndPoint(IPAddress.Parse("172.16.1.30"), 24452));
 
 			speaker.Control.SubscribeToEvents(server);
+			var queue = speaker.Control.GetQueue().Result;
 
 			while (true)
 			{
@@ -48,15 +42,15 @@ namespace SonosNet.Cli
 
 				if (line.StartsWith("a"))
 				{
-					await speaker.Control.Play();
+					speaker.Control.Play().Wait();
 				}
 				else if (line.StartsWith("s"))
 				{
-					await speaker.Control.Pause();
+					speaker.Control.Pause().Wait();
 				}
 				else if (line.StartsWith("v"))
 				{
-					await speaker.Control.SetVolume(int.Parse(line.Remove(0, 1).Trim()));
+					speaker.Control.SetVolume(int.Parse(line.Remove(0, 1).Trim())).Wait();
 				}
 				else if (line.StartsWith("b"))
 				{
@@ -64,10 +58,12 @@ namespace SonosNet.Cli
 				}
 				else if (line.StartsWith("u"))
 				{
-					var result = await speaker.Control.AddURITOQueue("x-sonos-spotify:spotify%3atrack%3a456lFrF5OrYuCffSHSaYfs?sid=9&amp;flags=8224&amp;sn=1", "", 0, true);
+					var result =
+						speaker.Control.AddURITOQueue(
+							"x-sonos-spotify:spotify%3atrack%3a456lFrF5OrYuCffSHSaYfs?sid=9&amp;flags=8224&amp;sn=1", "", 0, true).Result;
 					Console.WriteLine("TRACK NR: " + result.FirstTrackNumberEnqueued);
-					await speaker.Control.Seek(SeekUnitType.TrackNumber, result.FirstTrackNumberEnqueued.ToString());
-					await speaker.Control.Play();
+					speaker.Control.Seek(SeekUnitType.TrackNumber, result.FirstTrackNumberEnqueued.ToString()).Wait(); 
+					speaker.Control.Play().Wait(); ;
 				}
 				else if (line.StartsWith("q"))
 				{

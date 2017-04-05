@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using SonosNet.Contants;
+using UPnPNet;
 using UPnPNet.Models;
-using UPnPNet.Server;
 using UPnPNet.Services.AvTransport;
 using UPnPNet.Services.RenderingControl;
 
@@ -12,14 +12,17 @@ namespace SonosNet.Services
 {
 	public class SonosSpeakerControlService
 	{
+		internal readonly UPnPDevice SpeakerDevice;
 		private const int InstanceId = 0;
 		private readonly AvTransportServiceControl _avService;
 		private readonly RenderingControlServiceControl _renderingControlService;
 
 		public SonosSpeakerControlService(UPnPDevice speakerDevice)
 		{
-			UPnPService avService = speakerDevice.Services.FirstOrDefault(x => x.Type == UPnPSonosServiceTypes.AvService);
-			UPnPService renderingControl = speakerDevice.Services.FirstOrDefault(x => x.Type == UPnPSonosServiceTypes.RenderingControlService);
+			SpeakerDevice = speakerDevice;
+
+			UPnPService avService = this.GetMediaRendererService(UPnPSonosServiceTypes.AvService);
+			UPnPService renderingControl = this.GetMediaRendererService(UPnPSonosServiceTypes.RenderingControlService);
 
 			_avService = new AvTransportServiceControl(avService);
 			_renderingControlService = new RenderingControlServiceControl(renderingControl);
@@ -112,6 +115,24 @@ namespace SonosNet.Services
 		}
 
 		public event EventHandler<KeyValuePair<string, string>> OnUpdate;
+	}
+
+	public static class SonosSpeakerControlExtensions
+	{
+		public static UPnPService GetMediaRendererService(this SonosSpeakerControlService service, string serviceName)
+		{
+			return service.SpeakerDevice
+				.SubDevices
+				.FirstOrDefault(x => x.Services.Any(y => y.Type == UPnPSonosServiceTypes.AvService))
+				.Services.FirstOrDefault(x => x.Type == serviceName);
+		}
+		public static UPnPService GetMediaServerService(this SonosSpeakerControlService service, string serviceName)
+		{
+			return service.SpeakerDevice
+				.SubDevices
+				.FirstOrDefault(x => x.Services.Any(y => y.Type == UPnPSonosServiceTypes.ContentDirectory))
+				.Services.FirstOrDefault(x => x.Type == serviceName);
+		}
 	}
 
 	public class AddUriQueueResponse

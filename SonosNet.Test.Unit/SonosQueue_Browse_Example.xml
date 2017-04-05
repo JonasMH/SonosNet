@@ -1,0 +1,291 @@
+﻿<?xml version="1.0"?>
+<DIDL-Lite xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:upnp="urn:schemas-upnp-org:metadata-1-0/upnp/" xmlns:r="urn:schemas-rinconnetworks-com:metadata-1-0/" xmlns="urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/">
+	<item id="Q:0/1" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:51">x-sonos-spotify:spotify%3atrack%3a6MvIFODNWLuEJGO2X97YrG?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a6MvIFODNWLuEJGO2X97YrG%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Set Me Free - Original Mix</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Shockerz ft. Kirsten</dc:creator>
+		<upnp:album>Scantraxx 114</upnp:album>
+	</item>
+	<item id="Q:0/2" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:08">x-sonos-spotify:spotify%3atrack%3a7tou850A1qBJTJHizKXgiX?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a7tou850A1qBJTJHizKXgiX%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Love In Siberia - Radio Edit</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Hampenberg</dc:creator>
+		<upnp:album>Love In Siberia</upnp:album>
+	</item>
+	<item id="Q:0/3" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:24">x-sonos-spotify:spotify%3atrack%3a2lfPecqFbH8X4lHSpTxt8l?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a2lfPecqFbH8X4lHSpTxt8l%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Fade</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Alan Walker</dc:creator>
+		<upnp:album>Fade</upnp:album>
+	</item>
+	<item id="Q:0/4" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:09">x-sonos-spotify:spotify%3atrack%3a4uaKkokxOTir1EC20LngSV?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a4uaKkokxOTir1EC20LngSV%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>I'd Love To Change The World - Matstubs Remix</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Jetta</dc:creator>
+		<upnp:album>I'd Love To Change The World (Matstubs Remix)</upnp:album>
+	</item>
+	<item id="Q:0/5" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:37">x-sonos-spotify:spotify%3atrack%3a1CnPYaKxTVb4LWOtiGOm0m?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a1CnPYaKxTVb4LWOtiGOm0m%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>All Time Low</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Jon Bellion</dc:creator>
+		<upnp:album>The Human Condition</upnp:album>
+	</item>
+	<item id="Q:0/6" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:21">x-sonos-spotify:spotify%3atrack%3a214tNSr4epshNjQ6W2PTLg?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a214tNSr4epshNjQ6W2PTLg%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>You're Gonna Love Again</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>NERVO</dc:creator>
+		<upnp:album>Collateral</upnp:album>
+	</item>
+	<item id="Q:0/7" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:18">x-sonos-spotify:spotify%3atrack%3a5W9OWL9fs1FnTVuVJpjOV4?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a5W9OWL9fs1FnTVuVJpjOV4%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Decisions (feat. Miley Cyrus)</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Borgore</dc:creator>
+		<upnp:album>#NEWGOREORDER</upnp:album>
+	</item>
+	<item id="Q:0/8" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:10">x-sonos-spotify:spotify%3atrack%3a5uLSHSB8HGzVoMl0Q9YKcv?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a5uLSHSB8HGzVoMl0Q9YKcv%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Secrets</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Ti&#xEB;sto</dc:creator>
+		<upnp:album>Club Life, Vol. 4 - New York City</upnp:album>
+	</item>
+	<item id="Q:0/9" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:06">x-sonos-spotify:spotify%3atrack%3a4aFv0v8fpRsC2hFaIZEYGU?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a4aFv0v8fpRsC2hFaIZEYGU%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Young &amp; Stupid</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Travis Mills</dc:creator>
+		<upnp:album>Young &amp; Stupid</upnp:album>
+	</item>
+	<item id="Q:0/10" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:24">x-sonos-spotify:spotify%3atrack%3a2lfPecqFbH8X4lHSpTxt8l?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a2lfPecqFbH8X4lHSpTxt8l%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Fade</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Alan Walker</dc:creator>
+		<upnp:album>Fade</upnp:album>
+	</item>
+	<item id="Q:0/11" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:56">x-sonos-spotify:spotify%3atrack%3a2M9ro2krNb7nr7HSprkEgo?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a2M9ro2krNb7nr7HSprkEgo%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Fast Car</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Tracy Chapman</dc:creator>
+		<upnp:album>Tracy Chapman</upnp:album>
+	</item>
+	<item id="Q:0/12" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:28">x-sonos-spotify:spotify%3atrack%3a1i1fxkWeaMmKEB4T7zqbzK?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a1i1fxkWeaMmKEB4T7zqbzK%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Don't Let Me Down</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>The Chainsmokers</dc:creator>
+		<upnp:album>Don't Let Me Down</upnp:album>
+	</item>
+	<item id="Q:0/13" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:02:46">x-sonos-spotify:spotify%3atrack%3a6lDo13SSgTv0WbyUQKgnjk?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a6lDo13SSgTv0WbyUQKgnjk%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Light It Up (feat. Nyla &amp; Fuse ODG) - Remix</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Major Lazer</dc:creator>
+		<upnp:album>Peace Is The Mission: Extended</upnp:album>
+	</item>
+	<item id="Q:0/14" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:32">x-sonos-spotify:spotify%3atrack%3a1brwdYwjltrJo7WHpIvbYt?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a1brwdYwjltrJo7WHpIvbYt%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Faded</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Alan Walker</dc:creator>
+		<upnp:album>Faded</upnp:album>
+	</item>
+	<item id="Q:0/15" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:05:34">x-sonos-spotify:spotify%3atrack%3a5x3lpVdpLCWlbliQ7RY9pF?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a5x3lpVdpLCWlbliQ7RY9pF%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Far Cry 3</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Brian Tyler</dc:creator>
+		<upnp:album>Far Cry 3 (Original Game Soundtrack)</upnp:album>
+	</item>
+	<item id="Q:0/16" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:16">x-sonos-spotify:spotify%3atrack%3a3p6fkbeZDIVqapfdgQe6fm?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a3p6fkbeZDIVqapfdgQe6fm%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Famous</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Kanye West</dc:creator>
+		<upnp:album>The Life Of Pablo</upnp:album>
+	</item>
+	<item id="Q:0/17" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:27">x-sonos-spotify:spotify%3atrack%3a0SZqc82jwXtfomwo11gtVh?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a0SZqc82jwXtfomwo11gtVh%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Body Talk (feat. Julian Perretta) - Radio Edit</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Dimitri Vegas &amp; Like Mike</dc:creator>
+		<upnp:album>Body Talk (feat. Julian Perretta)</upnp:album>
+	</item>
+	<item id="Q:0/18" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:12">x-sonos-spotify:spotify%3atrack%3a70Cm5oZVkN7ggBU0jD1Mhq?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a70Cm5oZVkN7ggBU0jD1Mhq%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Come Closer (feat. David Jay)</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Faustix</dc:creator>
+		<upnp:album>Come Closer (feat. David Jay)</upnp:album>
+	</item>
+	<item id="Q:0/19" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:03">x-sonos-spotify:spotify%3atrack%3a23oeKzOm7crBmN1RS6MGfN?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a23oeKzOm7crBmN1RS6MGfN%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Love Druggie</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Mendoza</dc:creator>
+		<upnp:album>Love Druggie</upnp:album>
+	</item>
+	<item id="Q:0/20" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:45">x-sonos-spotify:spotify%3atrack%3a6WhzFzROw3aq3rPWjgYlxr?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a6WhzFzROw3aq3rPWjgYlxr%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Gold</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Kiiara</dc:creator>
+		<upnp:album>Gold</upnp:album>
+	</item>
+	<item id="Q:0/21" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:26">x-sonos-spotify:spotify%3atrack%3a3ImqHQzinSjGlgRg2O97QJ?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a3ImqHQzinSjGlgRg2O97QJ%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Waves (Tomorrowland 2014 Anthem) - Radio Mix</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Dimitri Vegas &amp; Like Mike</dc:creator>
+		<upnp:album>Waves (Tomorrowland 2014 Anthem)</upnp:album>
+	</item>
+	<item id="Q:0/22" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:15">x-sonos-spotify:spotify%3atrack%3a2iHDV1RWGDq7iKGKQZc2KM?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a2iHDV1RWGDq7iKGKQZc2KM%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Baddest</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Hamp &amp; Yeps</dc:creator>
+		<upnp:album>Baddest</upnp:album>
+	</item>
+	<item id="Q:0/23" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:02:49">x-sonos-spotify:spotify%3atrack%3a40nErQdWZoazrFt5rWfsSx?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a40nErQdWZoazrFt5rWfsSx%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Sparks (Turn Off Your Mind) - Atmozfears &amp; Audiotricz Radio Edit</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Fedde Le Grand</dc:creator>
+		<upnp:album>Hardstyle The Ultimate Collection 2013 Volume 3</upnp:album>
+	</item>
+	<item id="Q:0/24" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:32">x-sonos-spotify:spotify%3atrack%3a7cV0xhXZOPhdlBUODvCrDZ?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a7cV0xhXZOPhdlBUODvCrDZ%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Miracles</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Martin Jensen</dc:creator>
+		<upnp:album>Miracles</upnp:album>
+	</item>
+	<item id="Q:0/25" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:07:41">x-sonos-spotify:spotify%3atrack%3a065mLOJfAqeHZ162rIx5YB?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a065mLOJfAqeHZ162rIx5YB%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>L.E.D. There Be Light (Extended)</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Rank 1</dc:creator>
+		<upnp:album>L.E.D. There Be Light</upnp:album>
+	</item>
+	<item id="Q:0/26" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:34">x-sonos-spotify:spotify%3atrack%3a58Iv4tWNeM9Yc0TFktk5vd?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a58Iv4tWNeM9Yc0TFktk5vd%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Copernicus Landing</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Kid Cudi</dc:creator>
+		<upnp:album>KiD CuDi presents SATELLITE FLIGHT: The journey to Mother Moon</upnp:album>
+	</item>
+	<item id="Q:0/27" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:27">x-sonos-spotify:spotify%3atrack%3a39sWThNgYPDQDyH87BbxuS?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a39sWThNgYPDQDyH87BbxuS%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>In Love With The World</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Aura</dc:creator>
+		<upnp:album>Before The Dinosaurs</upnp:album>
+	</item>
+	<item id="Q:0/28" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:20">x-sonos-spotify:spotify%3atrack%3a4n7zT69gY8NWmCAs2rFQVq?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a4n7zT69gY8NWmCAs2rFQVq%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Calavera - Original Edit</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Klaas</dc:creator>
+		<upnp:album>Calavera</upnp:album>
+	</item>
+	<item id="Q:0/29" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:56">x-sonos-spotify:spotify%3atrack%3a0TwsfroKu7M2aCSGOKfnoK?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a0TwsfroKu7M2aCSGOKfnoK%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Far Away</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Kill The Noise</dc:creator>
+		<upnp:album>Far Away</upnp:album>
+	</item>
+	<item id="Q:0/30" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:06">x-sonos-spotify:spotify%3atrack%3a0yj8KIpR6YBaUA83JHY2cP?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a0yj8KIpR6YBaUA83JHY2cP%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Mumbai</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>JDG</dc:creator>
+		<upnp:album>Mumbai</upnp:album>
+	</item>
+	<item id="Q:0/31" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:12">x-sonos-spotify:spotify%3atrack%3a5irdIdByIFwZmKQroXthHV?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a5irdIdByIFwZmKQroXthHV%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Imaginary - XQ Edit</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Brennan Heart</dc:creator>
+		<upnp:album>Imaginary</upnp:album>
+	</item>
+	<item id="Q:0/32" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:19">x-sonos-spotify:spotify%3atrack%3a7vfWgVGiLgnGbInU5lvSQg?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a7vfWgVGiLgnGbInU5lvSQg%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>I Took A Pill In Ibiza - Seeb Remix</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Mike Posner</dc:creator>
+		<upnp:album>I Took A Pill In Ibiza (Seeb Remix)</upnp:album>
+	</item>
+	<item id="Q:0/33" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:18">x-sonos-spotify:spotify%3atrack%3a1CqMbKMQUUo1V7TZNEfsuh?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a1CqMbKMQUUo1V7TZNEfsuh%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Mad World - Radio Edit</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Michael Parsberg</dc:creator>
+		<upnp:album>Mad World</upnp:album>
+	</item>
+	<item id="Q:0/34" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:56">x-sonos-spotify:spotify%3atrack%3a4aLfrrzd8u1EnMoze9xyHc?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a4aLfrrzd8u1EnMoze9xyHc%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Koala - Scotty Lee Remix</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Blasterjaxx</dc:creator>
+		<upnp:album>Koala (The Remixes)</upnp:album>
+	</item>
+	<item id="Q:0/35" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:04:44">x-sonos-spotify:spotify%3atrack%3a13ek1HwkDg3l1HJjyueEqZ?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a13ek1HwkDg3l1HJjyueEqZ%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>We&#x2019;re All We Need - ilan Bluestone Remix ABGT Mix</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Above &amp; Beyond</dc:creator>
+		<upnp:album>Little Something Live from Wembley</upnp:album>
+	</item>
+	<item id="Q:0/36" parentID="Q:0" restricted="true">
+		<res protocolInfo="sonos.com-spotify:*:audio/x-spotify:*" duration="0:03:32">x-sonos-spotify:spotify%3atrack%3a6OZh916QF8XNunWaP97WEZ?sid=9&amp;flags=8224&amp;sn=1</res>
+		<upnp:albumArtURI>/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a6OZh916QF8XNunWaP97WEZ%3fsid%3d9%26flags%3d8224%26sn%3d1</upnp:albumArtURI>
+		<dc:title>Fast Car - Radio Edit</dc:title>
+		<upnp:class>object.item.audioItem.musicTrack</upnp:class>
+		<dc:creator>Jonas Blue</dc:creator>
+		<upnp:album>Fast Car (Radio Edit)</upnp:album>
+	</item>
+</DIDL-Lite>

@@ -22,17 +22,20 @@ namespace SonosNet.Services
 			IEnumerable<UPnPDevice> sonosDevices = devices.Where(x => x.Properties["friendlyName"].ToLower().Contains("sonos"));
 			IList<SonosSpeaker> speakers = new List<SonosSpeaker>();
 
+
+
 			foreach (UPnPDevice sonosDevice in sonosDevices)
 			{
-				UPnPDevice subDevice =
-					sonosDevice.SubDevices
-					.FirstOrDefault(x => x.Services.Any(y => y.Type == UPnPSonosServiceTypes.AvService));
+				UPnPDevice device = sonosDevice
+				.SubDevices
+				.FirstOrDefault(x => x.Services.Any(y => y.Type == UPnPSonosServiceTypes.AvService));
+
 
 				speakers.Add(new SonosSpeaker
 				{
-					Name = GetName(subDevice.Properties["friendlyName"]),
-					Uuid = subDevice.Properties["UDN"].Replace("uuid:", ""),
-					Control = new SonosSpeakerControlService(subDevice)
+					Name = GetName(device.Properties["friendlyName"]),
+					Uuid = sonosDevice.Properties["UDN"].Replace("uuid:", ""),
+					Control = new SonosSpeakerControlService(sonosDevice)
 				});
 			}
 
