@@ -34,7 +34,6 @@ namespace SonosNet.Cli
 			server.Start(new IPEndPoint(IPAddress.Parse("172.16.1.30"), 24452));
 
 			speaker.Control.SubscribeToEvents(server);
-			var queue = speaker.Control.GetQueue().Result;
 
 			while (true)
 			{
@@ -58,7 +57,7 @@ namespace SonosNet.Cli
 				}
 				else if (line.StartsWith("u"))
 				{
-					var result =
+					AddUriQueueResponse result =
 						speaker.Control.AddURITOQueue(
 							"x-sonos-spotify:spotify%3atrack%3a456lFrF5OrYuCffSHSaYfs?sid=9&amp;flags=8224&amp;sn=1", "", 0, true).Result;
 					Console.WriteLine("TRACK NR: " + result.FirstTrackNumberEnqueued);
