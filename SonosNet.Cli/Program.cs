@@ -31,7 +31,7 @@ namespace SonosNet.Cli
 
 
 			UPnPServer server = new UPnPServer();
-			server.Start(new IPEndPoint(IPAddress.Parse("172.16.1.30"), 24452));
+			server.Start(24452);
 
 			speaker.Control.SubscribeToEvents(server);
 
@@ -46,6 +46,10 @@ namespace SonosNet.Cli
 				else if (line.StartsWith("s"))
 				{
 					speaker.Control.Pause().Wait();
+				}
+				else if (line.StartsWith("n"))
+				{
+					speaker.Control.Next().Wait();
 				}
 				else if (line.StartsWith("v"))
 				{

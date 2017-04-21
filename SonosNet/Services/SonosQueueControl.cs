@@ -28,7 +28,6 @@ namespace SonosNet.Services
 		public static async Task<List<SonosQueueItem>> GetQueue(this SonosSpeakerControlService service, int startIndex = 0, int maxItems = 100)
 		{
 			UPnPServiceControl serviceControl = new UPnPServiceControl(service.GetMediaServerService(UPnPSonosServiceTypes.ContentDirectory));
-			List<SonosQueueItem> resultList = new List<SonosQueueItem>();
 			IDictionary<string, string> actionResult = await serviceControl.SendAction("Browse",
 					new Dictionary<string, string>()
 					{
@@ -52,16 +51,23 @@ namespace SonosNet.Services
 
 			XDocument doc = XDocument.Parse(xml);
 
-			foreach (var element in doc.Root.Elements())
+			foreach (XElement element in doc.Root.Elements())
 			{
-				var item = new SonosQueueItem();
+				SonosQueueItem item = new SonosQueueItem
+				{
+					Id = element.Attributes().FirstOrDefault(x => x.Name.LocalName == "id").Value,
+					Title = element.Elements().FirstOrDefault(x => x.Name.LocalName == "title").Value,
+					Creator = element.Elements().FirstOrDefault(x => x.Name.LocalName == "creator").Value,
+					Album = element.Elements().FirstOrDefault(x => x.Name.LocalName == "album").Value,
+					AlbumArtURI = element.Elements().FirstOrDefault(x => x.Name.LocalName == "albumArtURI").Value,
+					Duration =
+						element.Elements()
+							.FirstOrDefault(x => x.Name.LocalName == "res")
+							.Attributes()
+							.FirstOrDefault(x => x.Name.LocalName == "duration")
+							.Value
+				};
 
-				item.Id = element.Attributes().FirstOrDefault(x => x.Name.LocalName == "id").Value;
-				item.Title = element.Elements().FirstOrDefault(x => x.Name.LocalName == "title").Value;
-				item.Creator = element.Elements().FirstOrDefault(x => x.Name.LocalName == "creator").Value;
-				item.Album = element.Elements().FirstOrDefault(x => x.Name.LocalName == "album").Value;
-				item.AlbumArtURI = element.Elements().FirstOrDefault(x => x.Name.LocalName == "albumArtURI").Value;
-				item.Duration = element.Elements().FirstOrDefault(x => x.Name.LocalName == "res").Attributes().FirstOrDefault(x => x.Name.LocalName == "duration").Value;
 				resultList.Add(item);
 			}
 
